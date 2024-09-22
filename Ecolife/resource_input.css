@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2E7D32; /* Green color for headings */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555; /* Darker gray for labels */
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+select {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #2E7D32; /* Change border color on focus */
+    outline: none;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+}
+
+#additional-fields {
+    background: #f0f8f4; /* Light green background for the additional fields */
+    padding: 15px;
+    border: 1px solid #2E7D32; /* Green border */
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #2E7D32; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4CAF50; /* Lighter green on hover */
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin: 5px 0;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute Resources</title>
+    <link rel="stylesheet" href="resource_input.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contribute Resources</h1>
+        <form id="upload-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="type">Type:</label>
+            <select id="type" required>
+                <option value="">Select Type</option>
+                <option value="video">Video</option>
+                <option value="book">Book</option>
+                <option value="seminar">Seminar</option>
+                <option value="article">Article</option>
+            </select>
+
+            <div id="additional-fields" style="display: none;">
+                <label id="specific-label" for="specific-input">Specific Link/Upload:</label>
+                <input type="text" id="specific-input" placeholder="Enter link or upload file" />
+                <input type="file" id="file-input" style="display: none;" />
+            </div>
+
+             
+
+            <button type="submit">Upload</button>
+        </form>
+
+        <div class="card-grid"></div>
+    </div>
+
+    <script src="resource_input.js"></script>
+</body>
+</html>
