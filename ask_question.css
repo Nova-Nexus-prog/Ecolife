@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5fff0;
+    padding: 100px;
+    background-image: url("nature.svg");
+    background-size: cover;
+}
+
+#section {
+    /* Placeholder for future customization */
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.search-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-box {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.tree-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+
+/* For devices with a screen width of 768px and below (tablets and mobile) */
+@media (max-width: 768px) {
+    .container {
+        padding: 50px;
+        background-size: contain;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .search-box {
+        width: 250px;
+        font-size: 0.9rem;
+    }
+
+    .search-btn {
+        padding: 8px;
+    }
+}
+
+/* For devices with a screen width of 480px and below (mobile) */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        background-size: cover;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

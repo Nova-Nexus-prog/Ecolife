@@ -1,0 +1,1 @@
+document.getElementById("U_name").innerText=sessionStorage.getItem("username");

@@ -1,0 +1,194 @@
+/* General Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply Fade-In Animation to Body */
+body {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animate List Items */
+.list-group-item {
+  background-color: white;
+  border-color: #006400;
+  color: #006400;
+  transition: background-color 0.3s; /* Smooth background transition */
+  animation: slideIn 0.5s ease-in-out; /* Slide-in effect */
+}
+
+/* Button Hover Animation */
+.btn-primary {
+  background-color: #006400;
+  border-color: #006400;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in effect */
+}
+
+.btn-primary:hover {
+  background-color: #004b30;
+  border-color: #004b30;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Modal Animation */
+.modal {
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out; /* Fade-in for modal */
+ 
+}
+.modal button{
+  float: right;
+  scale: .6;
+}
+.modal-content {
+
+  animation: slideIn 0.3s ease-in-out; /* Slide-in for modal content */
+}
+
+/* Ask Question Section Animation */
+.ask-question-section {
+  animation: slideIn 0.5s ease-in-out; /* Slide-in effect */
+}
+
+/* Search Section Animation */
+.search-section {
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in effect */
+}
+
+.search-section input:focus {
+  box-shadow: 0 0 5px rgba(0, 100, 0, 0.5); /* Subtle glow effect */
+  animation: pulse 0.5s infinite alternate; /* Pulse effect on focus */
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 5px rgba(0, 100, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 0 10px rgba(0, 100, 0, 1);
+  }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+}
+
+.background-container {
+  position: relative;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Animation */
+.animated-text {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  color: #04662c; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.search-section {
+  text-align: center;
+  padding: 20px; 
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-section img {
+  max-height: 50px; 
+  width: auto; 
+  margin-bottom: 10px; 
+}
+
+.search-bar input {
+  background-color: white;
+  border: 1px solid #006400;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  height: 43px;
+  width: 300px; 
+}
+
+.search-bar button {
+  background-color: #006400;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-left: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #004b30;
+  color: #e5f3e5;
+}
+
+.search-bar input:focus,
+.search-bar button:focus {
+  outline: none;
+  border-color: #004b30;
+}
+
+.forum-section {
+  height: calc(100vh - 100vh); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px;
+  overflow-y: auto; 
+}
+
+.forum-section h2 {
+  margin-bottom: 20px; 
+}
+
+.ask-question-section {
+  margin-bottom: 30px; 
+}
+.modal-body{
+  display: flex;
+  flex-direction: column;
+}
+

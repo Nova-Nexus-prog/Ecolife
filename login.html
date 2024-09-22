@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="form-container" id="signup-form-container">
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required placeholder="Enter your email">
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required placeholder="Enter your password">
+
+                <label for="signup-confirm-password">Confirm Password:</label>
+                <input type="password" id="signup-confirm-password" required placeholder="Confirm your password">
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="signup-error-message"></p>
+            <div class="redirect">
+                <p>Already have an account? <a href="#" id="show-login-form">Login here</a></p>
+            </div>
+        </div>
+<!-- ---------------------login --------------------------- -->
+        <div class="form-container" id="login-form-container" style="display: none;">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required placeholder="Enter your email">
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required placeholder="Enter your password">
+               
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error-message"></p>
+            <div class="redirect">
+                <p>Don't have an account? <a href="#" id="show-signup-form">Sign Up here</a></p>
+            </div>
+        </div>
+        <a href="#" id="forgot-password">Forgot Password?</a>
+    </div>
+
+    <button id="g_sign" class="google-button">
+         Sign up with Google
+    </button>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+    
+
+    <script src="login.js"></script>
+</body>
+</html>

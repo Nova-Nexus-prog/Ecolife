@@ -1,0 +1,132 @@
+ 
+body {
+  background-color: white;
+  color: #006400;
+}
+
+header {
+  background-color: #006400;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #006400;
+  border-color: #006400;
+}
+
+.btn-primary:hover {
+  background-color: #004b30;
+  border-color: #004b30;
+}
+
+.bg-light {
+  background-color: white !important;
+}
+
+.breadcrumb {
+  background-color: #e5f3e5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.list-group-item {
+  background-color: white;
+  border-color: #006400;
+  color: #006400;
+}
+
+.list-group-item:hover {
+  background-color: #e5f3e5;
+}
+
+.modal-header, .modal-footer {
+  background-color: #006400;
+  color: white;
+}
+
+.modal-body {
+  color: #006400;
+}
+
+.modal-content {
+  border-color: #006400;
+}
+
+/* Reduce font size of question titles and descriptions */
+.list-group-item h5 {
+  font-size: 1rem; /* Reduced font size */
+}
+
+.list-group-item p {
+  font-size: 0.85rem; /* Reduced font size for descriptions */
+}
+ 
+
+/* Enhanced Modal Styling */
+/* Enhanced Modal Styling */
+.modal-content {
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  }
+  
+  .modal-header {
+    background-color: #f8f9fa; /* Light background for header */
+  }
+  
+  .modal-title {
+    color: #006400; /* Match the green color theme */
+  }
+  
+  .modal-body {
+    padding: 20px; /* Extra padding inside the modal body */
+  }
+  
+  .answer-box {
+    background-color: #f9f9f9; /* Light grey background for the box */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+  }
+  
+  .answer-box p {
+    color: #333; /* Darker text color for better readability */
+  }
+  
+  .btn-outline-danger {
+    border-color: #ff0000; /* Red border for the report button */
+    color: #ff0000; /* Red text color */
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #ff0000; /* Red background on hover */
+    color: white; /* White text color on hover */
+  }
+  /* Custom Styles for Ask a Question Section */
+.ask-question-section {
+    background-color: #e5f3e5; /* Light green background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ask-question-section p {
+    color: #006400; /* Dark green text color */
+  }
+  
+  .ask-question-section .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  
+  .ask-question-section .btn:hover {
+    background-color: #004b30; /* Darker green on hover */
+    border-color: #004b30;
+  }
+  
+  /* Custom Styles for Search Section */
+ .container{
+    margin-top: 100px;
+ }

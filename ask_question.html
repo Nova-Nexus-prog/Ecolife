@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum</title>
+    <link rel="stylesheet" href="ask_question.css">
+</head>
+<body>
+    <div class="container">
+        <div id="section">
+            <header>
+                <h1>Welcome to the Community Forum</h1>
+                <p>Ask your questions and find answers from the community</p>
+            </header>
+    
+            <div class="search-container">
+                <input type="text" placeholder="Ask a question..." class="search-box" id="question-input">
+                <button class="search-btn" id="ask-btn">ASK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <!-- Link to external JS file -->
+    <script src="ask_question.js"></script>
+</body>
+</html>

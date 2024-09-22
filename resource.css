@@ -1,0 +1,272 @@
+/* General Color Scheme */
+:root {
+    --primary-green: #4CAF50;
+    --dark-green: #388E3C;
+    --light-green: #81C784;
+    --background-color: #F0F4F8;
+    --text-color: #FFFFFF;
+    --text-dark: #333333;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+/* Header Section */
+.header {
+    background-color: var(--primary-green);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+}
+
+.header .logo h1 {
+    font-size: 1.5rem;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav ul li {
+    margin: 0 1rem;
+}
+
+.nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav ul li .button {
+    background-color: var(--dark-green);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav ul li .button:hover {
+    background-color: var(--light-green);
+}
+
+/* Resource Library Section */
+.resource-library {
+
+    text-align: center;
+}
+
+.resource-library h2 {
+    color: rgba(255, 255, 255, 0.811);
+    margin-bottom: 1rem;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0px 100px 0px 100px;
+}
+
+.filter-button {
+
+    border: 1px solid var(--dark-green);
+    height: 40px;
+    width: 40px;
+    background-color: var(--background-color);
+    margin: 0 0.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+ 
+.add_btn{
+    height: 40px;
+    width: 40px;
+    background-color: var(--background-color);
+    margin: 0 0.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+  
+
+}
+.add_btn p{
+    font-size: 11px;
+}
+.opt p {
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.search {
+    width: 300px;
+    height: 40px;
+    border: 1px solid var(--dark-green);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.search input {
+    border: none;
+    height: 35px;
+    width: 240px;
+    border-radius: 40px;
+    padding-left: 10px;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+
+}
+ 
+.search button {
+    height: 30px;
+    width:30px;
+    border-radius: 40px;
+    border: none;
+    background-color: var(--dark-green);
+    color: white;
+    
+}
+
+
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    row-gap: 3.5rem;
+    padding: 0 100px 0 100px;
+    margin-top: 100px;
+}
+
+.card {
+    background-color: var(--text-color);
+    border: 1px solid var(--primary-green);
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+     
+    height: 200px;
+    position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("resource_library.png");
+    backdrop-filter: var(--background-color);
+    color: white;
+}
+
+.card .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+    background-color: var(--background-color);
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    -webkit-box-shadow: inset 0px 0px 0px 1px var(--dark-green);
+    -moz-box-shadow: inset 0px 0px 0px 1px var(--dark-green);
+    box-shadow: inset 0px 0px 0px 1px var(--dark-green);
+}
+
+.card h3 {
+     margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 200;
+}
+
+.card p {
+     
+     font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+/* Button */
+.button {
+  background: transparent;
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.603);
+    width: 150px;
+    height: 25px;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.464);
+}
+
+.button:hover {
+    background-color: var(--dark-green);
+}
+
+/* Load More Button */
+.load-more {
+    margin: 2rem 0;
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--dark-green);
+    color: var(--text-color);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style-type: none;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: var(--light-green);
+}
+
+#resource_head {
+    width: 100%;
+    height: 250px;
+    background-image: url("resource_library.png");
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.options {
+    display: flex;
+}

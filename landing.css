@@ -1,0 +1,515 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Scroll Indicator Style */
+#scrollIndicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #00ff08; /* Green theme */
+    width: 0%;
+    z-index: 99;
+    transition: width 0.25s ease; /* Smooth transition */
+  }
+  .user-icon {
+    margin-left: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  body, html {
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  } 
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+::-webkit-slider-thumb{
+    display: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: rgba(0, 100, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* Navbar Link Styles */
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+.navbar img{
+    position: absolute;
+    left: 50px;
+}
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Video Section Styles */
+.video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.video-overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.video-overlay p {
+    font-size: 1.5rem;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 2rem;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+/* Features Section Styles */
+.features {
+    padding: 2rem;
+    background: #fff;
+}
+
+.feature {
+    margin-bottom: 2rem;
+}
+
+.feature h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    font-size: 1.125rem;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contactForm input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contactForm button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#contactForm button:hover {
+    background: #555;
+}
+/* About Section Styles */
+.about {
+    padding: 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+/* Latest News Section Styles */
+.latest-news {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.latest-news h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-around; /* Space out the news items */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.news-item {
+    background: #e8e8e8;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    flex: 1; /* Allows the item to grow and shrink */
+    min-width: 250px; /* Minimum width for responsive design */
+    max-width: 30%; /* Limit width for larger screens */
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-item p {
+    font-size: 1rem;
+}
+.news-item img {
+    width: 100%; /* Make the image take full width of the news item */
+    height: 200px; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Round the corners for a nicer look */
+    margin-bottom: 0.5rem; /* Space between image and text */
+}
+.about-image {
+    text-align: center; /* Center the content */
+    margin-bottom: 2rem;
+    margin-top: 30px; /* Space between image and about section */
+}
+
+.about-image h2 {
+    font-size: 2.5rem; /* Size for the heading */
+    margin-bottom: 0.5rem; /* Space between heading and paragraph */
+}
+
+.about-image p {
+    font-size: 1.125rem; /* Size for the paragraph */
+    margin-bottom: 1rem; /* Space below the paragraph */
+}
+
+.about-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 800px; /* Optional: limit max width */
+    border-radius: 8px; /* Optional: round corners */
+}
+.about-image {
+    position: relative; /* Position relative for absolute positioning of overlay */
+    margin-bottom: 2rem; /* Space between image and about section */
+}
+
+.about-image img {
+    width: 100%; /* Make the image responsive */
+    height: 400px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 8px; /* Round corners */
+}
+
+.image-overlay {
+    position: absolute; /* Position overlay text on top of the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to center */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    padding: 1rem; /* Padding around text */
+    border-radius: 8px; /* Optional: round corners of overlay */
+}
+
+.image-overlay h2 {
+    font-size: 2.5rem; /* Size for the heading */
+    margin: 0; /* Remove margin */
+}
+
+.image-overlay p {
+    font-size: 1.125rem; /* Size for the paragraph */
+    margin: 0; /* Remove margin */
+}/* Footer Styling */
+footer {
+    background-color: #3e8e41;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-links {
+    margin-bottom: 20px;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+footer .social-icons a:hover {
+    color: #8FBC8F;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        font-size: 14px;
+    }
+    
+    footer .social-icons a {
+        font-size: 20px;
+    }
+}
+
+.product-section {
+    padding: 40px;
+    background-color: #f2f2f2;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 20%;
+    background-color: white;
+    font-size: 13px;
+    margin: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.product-item img {
+    width: 100%;
+    height: 200px
+}
+
+.buy-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3e8e41;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+     
+}
+
+.donate-btn:hover {
+    background-color: #2d6930;
+}
+.donation-promo-section {
+    background-color: #3e8e41;
+    color: white;
+    text-align: left;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.promo-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.donation-promo-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.donation-promo-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.donate-now-btn {
+    background-color: white;
+    color: #3e8e41;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.donate-now-btn:hover {
+    background-color: #f2f2f2;
+}
+.community-promo-section {
+    text-align: right;
+    background-color: #f4f4f4;
+    color: #3e8e41;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 60px 20px;
+}
+
+.community-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.community-promo-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.community-promo-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.join-community-btn {
+    background-color: #3e8e41;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.join-community-btn:hover {
+    background-color: #2c6d30;
+}
+#sub_section{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.resource-library-section {
+    background-color: #3e8e41;
+    color: white;
+    text-align: left;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .resource-library-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .resource-library-content h2 {
+    font-size: 28px;
+     
+    margin-bottom: 20px;
+  }
+
+  .resource-library-content p {
+    font-size: 18px;
+     
+    margin-bottom: 30px;
+  }
+
+  .visit-library-btn {
+    background-color: white;
+    color: #3e8e41;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .visit-library-btn:hover {
+    background-color: #f2f2f2;
+  }
+
+  .visit-library-btn:focus {
+    outline: none;
+  }
+  section{
+    border-radius: 10px;
+  }
