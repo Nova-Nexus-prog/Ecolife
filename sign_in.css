@@ -228,7 +228,7 @@ h1 {
     position: absolute;
     right: 0;
     border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.266), rgba(0, 0, 0, 0.298)), url("image1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.266), rgba(0, 0, 0, 0.298)), url("https://st.depositphotos.com/1559686/4478/i/450/depositphotos_44786801-stock-photo-small-tree-plant-in-hand.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
