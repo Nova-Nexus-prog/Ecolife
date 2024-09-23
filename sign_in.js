@@ -43,7 +43,7 @@ signInBtn.addEventListener('click', () => {
                 const user = userCredential.user;
                 sessionStorage.setItem('username', `${firstName} ${lastName}`);
                 alert('Account created successfully!');
-                window.location.href = 'dashboard.html'; // Redirect to dashboard
+                window.location.href = 'index.html'; // Redirect to dashboard
             })
             .catch((error) => {
                 console.error('Error creating account: ', error.message);
