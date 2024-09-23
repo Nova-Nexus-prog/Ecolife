@@ -41,7 +41,7 @@ signInBtn.addEventListener('click', () => {
             .then((userCredential) => {
                 // Account created, you can save additional info in the database
                 const user = userCredential.user;
-                sessionStorage.setItem('userName', `${firstName} ${lastName}`);
+                sessionStorage.setItem('username', `${firstName} ${lastName}`);
                 alert('Account created successfully!');
                 window.location.href = 'dashboard.html'; // Redirect to dashboard
             })
@@ -62,7 +62,7 @@ loginBtn.addEventListener('click', () => {
     auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             const user = userCredential.user;
-            sessionStorage.setItem('userName', user.displayName || email);
+            sessionStorage.setItem('username', user.displayName || email);
             alert('Logged in successfully!');
             window.location.replace = 'index.html'; // Redirect to dashboard
         })
@@ -78,7 +78,7 @@ if (googleButton) {
         auth.signInWithPopup(googleProvider)
             .then((result) => {
                 const user = result.user;
-                sessionStorage.setItem('userName', user.displayName);
+                sessionStorage.setItem('username', user.displayName);
                 alert('Google Sign-In successful!');
                 window.location.replace = 'index.html'; // Redirect to dashboard
             })
