@@ -176,7 +176,7 @@ video {
 /* About Section Styles */
 .about {
     padding: 2rem;
-    background: #f4f4f4;
+     
     text-align: center;
 }
 
@@ -186,14 +186,15 @@ video {
 }
 
 .about p {
-    font-size: 1.125rem;
+    font-size: 15px;
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 /* Latest News Section Styles */
 .latest-news {
-    padding: 2rem;
-    background: #fff;
+    
+    
     text-align: center;
 }
 
@@ -209,7 +210,7 @@ video {
 }
 
 .news-item {
-    background: #e8e8e8;
+     
     padding: 1rem;
     margin: 1rem;
     border-radius: 8px;
@@ -219,12 +220,14 @@ video {
 }
 
 .news-item h3 {
-    font-size: 1.5rem;
+    font-size: 15px;
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .news-item p {
-    font-size: 1rem;
+    font-size: 13px;
+    text-align: left;
 }
 .news-item img {
     width: 100%; /* Make the image take full width of the news item */
@@ -341,24 +344,23 @@ footer p {
     }
 }
 
-.product-section {
-    padding: 40px;
-    background-color: #f2f2f2;
-}
-
+ .product-section{
+margin-top: 30px;
+ }
 .product-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+     
+     
 }
 
 .product-item {
     width: 20%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     font-size: 13px;
     margin: 20px;
     margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+ 
     text-align: center;
     position: relative;
     display: flex;
@@ -368,8 +370,19 @@ footer p {
 
 
 .product-item img {
-    width: 100%;
+ 
+    width: 190px;
     height: 200px
+}
+.product-item h5{
+    margin-top: 10px;
+    text-align: left;
+    background: transparent;
+}
+.product-item p{
+     
+    text-align: left;
+    background: transparent;
 }
 
 .buy-btn {
@@ -513,3 +526,15 @@ footer p {
   section{
     border-radius: 10px;
   }
+
+  section {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Move slightly down */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+section.show {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide into place */
+}
+

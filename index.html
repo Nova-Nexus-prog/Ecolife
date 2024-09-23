@@ -118,11 +118,12 @@
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+      display: none;
       animation: hiding .5 6.0s forwards;
     }
 
     #main_container {
-      display: none;
+      display: block;
     }
 
 
@@ -177,10 +178,10 @@
 
     <main>
       <section class="video-section">
-        <video autoplay muted loop preload="auto" aria-label="Promotional video for EcoLife">
+        <!-- <video autoplay muted loop preload="auto" aria-label="Promotional video for EcoLife">
                 <source src="https://videos.pexels.com/video-files/14588487/14588487-uhd_2560_1440_30fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
         <div class="video-overlay">
           <h1>ECOLIFE
             <svg width="100" height="100" viewBox="0 0 260 270" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,34 +273,25 @@
           <div class="product-list">
             <div class="product-item">
               <img src="https://waterful.in/cdn/shop/files/Bottle.jpg?v=1694019970" alt="Reusable Water Bottle" />
-              <h3>Reusable Water Bottle</h3>
-              <p>This eco-friendly water bottle reduces plastic waste and promotes sustainable hydration.</p>
-              <a href="https://www.amazon.com/dp/B07Z68XJRC" class="buy-btn">Buy</a>
+              <h5>Reusable Water Bottle</h5>
+               <p>$100</p>
             </div>
             <div class="product-item">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThyt6ZnMyRwybAhFUHgPRF-FRx9mJWXMG_6g&s" alt="Organic Fertilizer" />
-              <h3>Organic Fertilizer</h3>
-              <p>Our organic fertilizer is designed to improve soil health and promote sustainable farming.</p>
-              <a href="https://www.amazon.com/dp/B01M72ZXFD" class="buy-btn">Buy</a>
+              <h5>Organic Fertilizer</h5>
+              <p>$100</p>
             </div>
             <div class="product-item">
               <img src="https://agnisolar.com/wp-content/uploads/2019/09/solar-latern-thumb-600x600.jpg" alt="Solar Lantern" />
-              <h3>Solar Lantern</h3>
-              <p>Harness the power of the sun with this portable and eco-friendly solar lantern.</p>
-              <a href="https://www.amazon.com/dp/B08KHSL9KK" class="buy-btn">Buy</a>
+              <h5>Solar Lantern</h5>
+              <p>$100</p>
             </div>
             <div class="product-item">
               <img src="https://mygreenbin.in/wp-content/uploads/2023/03/250-ltrs-Community-Composter-01.jpg" alt="Compost Bin" />
-              <h3>Compost Bin</h3>
-              <p>This compost bin helps you reduce food waste and turn organic scraps into valuable compost.</p>
-              <a href="https://www.amazon.com/dp/B0855HKQG1" class="buy-btn">Buy</a>
+              <h5>Compost Bin</h5>
+              <p>$100</p>
             </div>
-            <div class="product-item">
-              <img src="https://m.media-amazon.com/images/I/41opF+7d3oL.jpg" alt="Wind Turbine Model" />
-              <h3>Wind Turbine Model</h3>
-              <p>Support clean energy with this wind turbine model, designed to raise awareness of renewable energy.</p>
-              <a href="https://www.amazon.com/dp/B07PZ6P7K9" class="buy-btn">Buy</a>
-            </div>
+           
           </div>
           <style>
             button {
@@ -380,10 +372,10 @@
   </div>
   </div>
 
-  <!-- Shameless plug 😉 -->
+  <!-- Shameless plug 😉
   <a class="twitter" href="https://twitter.com/KeenanPayne_" title="Follow me on Twitter" target="_blank">
     <img src="https://assets.codepen.io/174608/twitter.svg" />
-  </a>
+  </a> -->
   <script>
     setTimeout(() => {
       document.getElementById("splash").style.display = "none";

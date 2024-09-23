@@ -47,7 +47,7 @@ signInBtn.addEventListener('click', () => {
             })
             .catch((error) => {
                 console.error('Error creating account: ', error.message);
-                alert('Error: ' + error.message);
+                alert("Something went wrong! please try Again");
             });
     } else {
         alert('Please fill in all fields.');
