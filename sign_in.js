@@ -10,13 +10,12 @@ function sign_in_call() {
 }
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBSL9CcMpfU-7NPtCz1LjWVuR3Th5NlduI",
-authDomain: "fir-3d35c.firebaseapp.com",
-databaseURL: "https://fir-3d35c-default-rtdb.firebaseio.com",
-projectId: "fir-3d35c",
-storageBucket: "fir-3d35c.appspot.com",
-messagingSenderId: "485524239132",
-appId: "1:485524239132:web:b6c08abaafe83520c940d9"
+  apiKey: "AIzaSyAc6GL6tCcqYlwnWmkheYqYciVj_BfqZ_A",
+  authDomain: "ecolife-b8700.firebaseapp.com",
+  projectId: "ecolife-b8700",
+  storageBucket: "ecolife-b8700.appspot.com",
+  messagingSenderId: "685408169279",
+  appId: "1:685408169279:web:f5e83ea19f4f58b393b78a"
 };
 firebase.initializeApp(firebaseConfig);
 
