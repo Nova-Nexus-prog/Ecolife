@@ -72,6 +72,19 @@ body {
     color: white;
     font-weight: bolder;
 }
+#togglePassword_log {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+#password:focus {
+    border-color: limegreen;
+    outline: none;
+}
 
 /* ----------------------------------------------sign in --------------------------- */
 .sign_in {

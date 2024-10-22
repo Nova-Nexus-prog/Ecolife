@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco life</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+    <div class="chat-container">
+
+        <div class="chat">
+            <div class="chat-header">
+                <img src="svg/white_logo.svg" alt="NoteNest">
+                <h2>EcoMitra</h2>
+            </div>
+            <div class="message-list">
+
+                <div id="heading">
+
+                    <h1 id="head">HELLO THERE !</h1>
+                    <p id="sub_head">HOW CAN I HELP YOU</p>
+                </div>
+
+            </div>
+            <div class="message-input">
+                <div id="inner_text">
+                    <p contenteditable="true" id="input" placeholder="Enter your name"></p>
+                    <div id="btns">
+
+                        <button id="img_send"><img src="pin.svg" alt="" id="upload_icon"></button>
+                        <button id="send-button">
+                            <svg class="w-6 h-6 text-white-800 dark:text-green" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none"
+                                viewBox="0 0 24 24" id="image">
+                                <path stroke="#00990a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5" />
+                            </svg>
+
+                        </button>
+
+
+                    </div>
+                </div>
+                <p style="
+                    margin-top: 62px;
+                    font-size: 13px;
+                    color: white;
+                ">It may display inaccurate info,so double-check its responses.</p>
+                <div id="img_div_sel">
+                    <p id="cancel"><br>Cancel</p>
+                    <img src="svg/white_logo.svg" id="img_select" height="50px" width="50px">
+                </div>
+
+            </div>
+        </div>
+        <input type="file" name="" id="file" style="display: none;">
+    </div>
+
+    <script src="chat.js"></script>
+
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module">
+
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+
+
+
+
+        function _0x36c2(_0x36dd4e, _0x11ef4e) { const _0x1b3f00 = _0x1b3f(); return _0x36c2 = function (_0x36c20f, _0x830a96) { _0x36c20f = _0x36c20f - 0x151; let _0x7c83c3 = _0x1b3f00[_0x36c20f]; return _0x7c83c3; }, _0x36c2(_0x36dd4e, _0x11ef4e); } function _0x1b3f() { const _0x4197fa = ['40094408fonwZk', '2740912zJXDzL', '6115602opkGpP', '5427282FjrCMu', '1360459upAWpO', '205gQBSJv', '112948OIGIOf', '481053gclOqr']; _0x1b3f = function () { return _0x4197fa; }; return _0x1b3f(); } (function (_0x2fb4ed, _0x4dfab3) { const _0x2ed3cc = _0x36c2, _0x3d0d98 = _0x2fb4ed(); while (!![]) { try { const _0x2557f6 = -parseInt(_0x2ed3cc(0x152)) / 0x1 + -parseInt(_0x2ed3cc(0x157)) / 0x2 + -parseInt(_0x2ed3cc(0x155)) / 0x3 + parseInt(_0x2ed3cc(0x154)) / 0x4 * (-parseInt(_0x2ed3cc(0x153)) / 0x5) + -parseInt(_0x2ed3cc(0x158)) / 0x6 + parseInt(_0x2ed3cc(0x151)) / 0x7 + parseInt(_0x2ed3cc(0x156)) / 0x8; if (_0x2557f6 === _0x4dfab3) break; else _0x3d0d98['push'](_0x3d0d98['shift']()); } catch (_0x317d6a) { _0x3d0d98['push'](_0x3d0d98['shift']()); } } }(_0x1b3f, 0xaf81d)); function decodeString(_0x1d0201) { const _0x5a5dfe = atob(_0x1d0201); return _0x5a5dfe; } const xywznay_iynxbx = decodeString('QUl6YVN5REtjM3F3RlZRVXRKaHpnZjRaYzJxbkRPbFRXd01pQ1RJ');
+
+
+
+        const genAI = new GoogleGenerativeAI(xywznay_iynxbx);
+
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        let isimgSelected = false;
+
+        async function run(prompt) {
+
+            const result = await model.generateContent(prompt);
+            const response = await result.response;
+            const text = response.text();
+            return text;
+
+
+        }
+        const messageList = document.querySelector('.message-list');
+
+        sendButton.addEventListener('click', () => {
+            const messageContent = messageInput.innerText.trim();
+            if (isinput == true) {
+                if (initial == true) {
+                    initial = false;
+                    document.getElementById("heading").style.display = "none";
+                }
+                messageInput.innerText = placeholderText;
+                isinput = !isinput;
+                sendMessage(messageContent);
+
+                if (isimgSelected == false) {
+                    responseMessage(messageContent);
+                }
+                else {
+                    responseimgMessage(messageContent);
+                    document.getElementById("img_div_sel").style.display = "none"
+                    const fileInputEl = document.getElementById("file");
+                    fileInputEl.value = null;
+                }
+            }
+        });
+
+        img_send.addEventListener('click', () => {
+
+            // const messageContent = messageInput.innerText.trim();
+            // if (isinput == true) {
+            //     if (initial == true) {
+            //         initial = false;
+            //         document.getElementById("heading").style.display = "none";
+            //     }
+            //     messageInput.innerText = placeholderText;
+            //     isinput = !isinput;
+            //     sendMessage(messageContent);
+
+            //      responseimgMessage(messageContent)
+
+            // }
+
+            const file_img = document.getElementById("file");
+            file_img.click();
+        });
+
+        document.getElementById("file").addEventListener("change", () => {
+
+            isimgSelected = !isimgSelected;
+            document.getElementById("img_div_sel").style.display = "block";
+            const fileInputEl = document.getElementById("file");
+
+            document.getElementById("img_select").setAttribute("src", fileInputEl.files[0].name);
+        })
+        document.getElementById("cancel").addEventListener("click", () => {
+            document.getElementById("img_div_sel").style.display = "none"
+            const fileInputEl = document.getElementById("file");
+            fileInputEl.value = null;
+            isimgSelected = !isimgSelected;
+        })
+        async function responseMessage(messageContent) {
+            // Simulate sending a message (replace with real logic)
+
+            const messageElement2 = document.createElement('div');
+            messageElement2.classList.add('loader');
+            messageList.appendChild(messageElement2);
+            messageElement2.scrollIntoView();
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+
+
+            const userPicture = document.createElement('img');
+            userPicture.classList.add('user-picture');
+            userPicture.src = "svg/white_logo.svg";
+
+
+            messageElement.innerHTML = '';
+            messageElement.appendChild(userPicture);
+            var ms = await run(messageContent);
+            messageList.removeChild(messageElement2);
+            messageElement.innerHTML += formatInfo(ms);
+            messageList.appendChild(messageElement);
+            messageInput.value = ''; // Clear the input field
+            // Scroll to the bottom of the message list
+            messageList.scrollTop = messageList.scrollHeight;
+        }
+
+        async function responseimgMessage(messageContent) {
+            // Simulate sending a message (replace with real logic)
+
+            const messageElement2 = document.createElement('div');
+            messageElement2.classList.add('loader');
+            messageList.appendChild(messageElement2);
+            messageElement2.scrollIntoView();
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+
+
+            const userPicture = document.createElement('img');
+            userPicture.classList.add('user-picture');
+            userPicture.src = "logo.jpeg";
+
+
+            messageElement.innerHTML = '';
+            messageElement.appendChild(userPicture);
+            var ms = await runimg(messageContent);
+            messageList.removeChild(messageElement2);
+            messageElement.innerHTML += formatInfo(ms);
+            messageList.appendChild(messageElement);
+            messageInput.value = ''; // Clear the input field
+            // Scroll to the bottom of the message list
+            messageList.scrollTop = messageList.scrollHeight;
+        }
+
+
+
+        // Converts a File object to a GoogleGenerativeAI.Part object.
+        async function fileToGenerativePart(file) {
+            const base64EncodedDataPromise = new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onloadend = () => resolve(reader.result.split(',')[1]);
+                reader.readAsDataURL(file);
+            });
+            return {
+                inlineData: { data: await base64EncodedDataPromise, mimeType: file.type },
+            };
+        }
+
+        async function runimg(input) {
+            // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+            const prompt = input;
+
+            const fileInputEl = document.getElementById("file");
+            const imageParts = await Promise.all(
+                [...fileInputEl.files].map(fileToGenerativePart)
+            );
+
+            const result = await model.generateContent([prompt, ...imageParts]);
+            const response = await result.response;
+            const text = response.text();
+            isimgSelected = !isimgSelected;
+            return text;
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

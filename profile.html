@@ -25,11 +25,25 @@
         </header>
     
       
-        <div class="profile-bio">
-            <p>News <br>Posted: <span id="news-posted">0</span></p>
-            <p>Resources <br>Contributed: <span id="resources-contributed">0</span></p>
-            <p>Questions <br>Asked: <span id="questions-asked">0</span></p>
-        </div>
+        <section class="product-table">
+            <h2>Product Orders</h2>
+            <table id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product ID</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be generated here -->
+                </tbody>
+            </table>
+        </section>
     
         <!-- some social links to show off -->
         <ul class="profile-social-links">
@@ -49,6 +63,8 @@
         </ul>
     
     </aside>
-        <script src="profile.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="profile.js"></script>
 </body>
 </html>

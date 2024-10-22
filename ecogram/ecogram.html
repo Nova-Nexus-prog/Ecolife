@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Friendly Instagram Clone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #3e8e41;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .post-form {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .post-form input, .post-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .post-form button {
+      padding: 10px 20px;
+      background-color: #3e8e41;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .post {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .post img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 15px;
+    }
+    .post-content h3 {
+      margin-bottom: 10px;
+    }
+    .post-content p {
+      margin-bottom: 5px;
+      color: #555;
+    }
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-top: 1px solid #eee;
+    }
+    .post-actions button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #3e8e41;
+      font-size: 14px;
+    }
+    .post-actions button:hover {
+      text-decoration: underline;
+    }
+    .comments-section {
+      padding: 15px;
+      border-top: 1px solid #eee;
+    }
+    .comments-section input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Eco-Friendly Posts</h1>
+  </header>
+
+  <div class="container">
+    <div class="post-form">
+      <h2>Share an Eco-Friendly Post</h2>
+      <input type="text" id="postTitle" placeholder="Enter post title" />
+      <textarea id="postDescription" placeholder="Enter description"></textarea>
+      <input type="text" id="postImage" placeholder="Enter image URL" />
+      <button onclick="addPost()">Post</button>
+    </div>
+
+    <div class="posts" id="postsContainer"></div>
+  </div>
+
+  <script>
+    const posts = [
+  {
+    title: "Plant a Tree Initiative",
+    description: "Join us in planting trees to fight climate change.",
+    image: "https://via.placeholder.com/300",
+    likes: 45,
+    comments: ["Great initiative!", "I'll join!"]
+  },
+  {
+    title: "Beach Cleanup Drive",
+    description: "Help us clean the beach and protect marine life.",
+    image: "https://via.placeholder.com/300",
+    likes: 78,
+    comments: ["Count me in!", "Let's keep our beaches clean!"]
+  },
+  {
+    title: "Composting Workshop",
+    description: "Learn how to turn food waste into compost.",
+    image: "https://via.placeholder.com/300",
+    likes: 30,
+    comments: ["I want to try this!", "This will help reduce waste."]
+  },
+  {
+    title: "Solar Panel Installation",
+    description: "Homes in our community are switching to solar energy.",
+    image: "https://via.placeholder.com/300",
+    likes: 150,
+    comments: ["Renewable energy is the future!", "Go solar!"]
+  },
+  {
+    title: "Recycling Campaign",
+    description: "Help reduce waste by recycling at home.",
+    image: "https://via.placeholder.com/300",
+    likes: 62,
+    comments: ["Recycling is essential!", "Thanks for spreading awareness."]
+  },
+  {
+    title: "Wildlife Conservation",
+    description: "Support wildlife conservation efforts in your area.",
+    image: "https://via.placeholder.com/300",
+    likes: 98,
+    comments: ["We need to protect wildlife!", "Thank you for this."]
+  },
+  {
+    title: "Community Garden",
+    description: "Join our community garden to grow organic vegetables.",
+    image: "https://via.placeholder.com/300",
+    likes: 84,
+    comments: ["Organic gardening is great!", "I'd love to join."]
+  },
+  {
+    title: "Plastic-Free Challenge",
+    description: "Take the challenge to reduce single-use plastics.",
+    image: "https://via.placeholder.com/300",
+    likes: 55,
+    comments: ["I'll take the challenge!", "This is a must!"]
+  },
+  {
+    title: "Rainwater Harvesting",
+    description: "Learn how to harvest rainwater for gardening.",
+    image: "https://via.placeholder.com/300",
+    likes: 40,
+    comments: ["I'm interested in this!", "Such a great practice."]
+  },
+  {
+    title: "Bike to Work Day",
+    description: "Leave your car at home and bike to work for a day.",
+    image: "https://via.placeholder.com/300",
+    likes: 92,
+    comments: ["Biking is fun and eco-friendly!", "I do this daily."]
+  },
+  {
+    title: "Zero-Waste Lifestyle",
+    description: "Tips and tricks to lead a zero-waste lifestyle.",
+    image: "https://via.placeholder.com/300",
+    likes: 60,
+    comments: ["Zero-waste is the future!", "Great ideas!"]
+  },
+  {
+    title: "Eco-Friendly DIY Projects",
+    description: "Craft eco-friendly items using recycled materials.",
+    image: "https://via.placeholder.com/300",
+    likes: 70,
+    comments: ["I love DIY projects!", "Very creative."]
+  },
+  {
+    title: "Organic Farm Visit",
+    description: "Visit a local organic farm and learn sustainable practices.",
+    image: "https://via.placeholder.com/300",
+    likes: 100,
+    comments: ["I want to visit!", "This sounds fun."]
+  },
+  {
+    title: "Energy Conservation Tips",
+    description: "Simple ways to save energy at home.",
+    image: "https://via.placeholder.com/300",
+    likes: 82,
+    comments: ["I'll start conserving energy!", "Great tips!"]
+  },
+  {
+    title: "Green Building Practices",
+    description: "Learn about eco-friendly construction methods.",
+    image: "https://via.placeholder.com/300",
+    likes: 64,
+    comments: ["Interesting!", "I want to learn more."]
+  },
+  {
+    title: "Sustainable Fashion",
+    description: "Explore eco-friendly clothing brands.",
+    image: "https://via.placeholder.com/300",
+    likes: 90,
+    comments: ["I love sustainable fashion!", "Buying eco-friendly clothes now."]
+  },
+  {
+    title: "E-Waste Recycling",
+    description: "Dispose of your electronics responsibly by recycling e-waste.",
+    image: "https://via.placeholder.com/300",
+    likes: 56,
+    comments: ["E-waste recycling is important.", "Thanks for sharing."]
+  },
+  {
+    title: "Tree Planting Day",
+    description: "Help us plant trees in the local park.",
+    image: "https://via.placeholder.com/300",
+    likes: 120,
+    comments: ["I'll be there!", "Can't wait!"]
+  },
+  {
+    title: "Eco-Friendly Cleaning",
+    description: "Discover natural alternatives for cleaning products.",
+    image: "https://via.placeholder.com/300",
+    likes: 47,
+    comments: ["I'm switching to natural cleaners!", "Thanks for the tips."]
+  },
+  {
+    title: "Electric Vehicle Showcase",
+    description: "Come see the latest electric vehicles on display.",
+    image: "https://via.placeholder.com/300",
+    likes: 135,
+    comments: ["EVs are the future!", "Going electric soon."]
+  }
+];
+
+
+    const postsContainer = document.getElementById('postsContainer');
+
+    function renderPosts() {
+      postsContainer.innerHTML = '';
+      posts.forEach((post, index) => {
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('post');
+        postDiv.innerHTML = `
+          <img src="${post.image}" alt="${post.title}">
+          <div class="post-content">
+            <h3>${post.title}</h3>
+            <p>${post.description}</p>
+          </div>
+          <div class="post-actions">
+            <button onclick="likePost(${index})">Like (${post.likes})</button>
+            <button onclick="toggleComments(${index})">Comment</button>
+            <button onclick="sharePost(${index})">Share</button>
+          </div>
+          <div class="comments-section" id="comments-${index}" style="display: none;">
+            <div id="commentsList-${index}">
+              ${post.comments.map(comment => `<p>${comment}</p>`).join('')}
+            </div>
+            <input type="text" id="commentInput-${index}" placeholder="Add a comment..." />
+            <button onclick="addComment(${index})">Add Comment</button>
+          </div>
+        `;
+        postsContainer.appendChild(postDiv);
+      });
+    }
+
+    function addPost() {
+      const title = document.getElementById('postTitle').value;
+      const description = document.getElementById('postDescription').value;
+      const image = document.getElementById('postImage').value;
+
+      if (title && description && image) {
+        posts.unshift({
+          title: title,
+          description: description,
+          image: image,
+          likes: 0,
+          comments: []
+        });
+        renderPosts();
+        document.getElementById('postTitle').value = '';
+        document.getElementById('postDescription').value = '';
+        document.getElementById('postImage').value = '';
+      } else {
+        alert("Please fill out all fields!");
+      }
+    }
+
+    function likePost(index) {
+      posts[index].likes++;
+      renderPosts();
+    }
+
+    function toggleComments(index) {
+      const commentsSection = document.getElementById(`comments-${index}`);
+      if (commentsSection.style.display === 'none') {
+        commentsSection.style.display = 'block';
+      } else {
+        commentsSection.style.display = 'none';
+      }
+    }
+
+    function addComment(index) {
+      const commentInput = document.getElementById(`commentInput-${index}`);
+      const comment = commentInput.value;
+      if (comment) {
+        posts[index].comments.push(comment);
+        commentInput.value = '';
+        renderPosts();
+      }
+    }
+
+    function sharePost(index) {
+      alert(`Shared: ${posts[index].title}`);
+    }
+
+    renderPosts();
+  </script>
+
+</body>
+</html>

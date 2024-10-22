@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload News</title>
+  <link rel="stylesheet" href="news_upload.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Upload New News Article</h1>
+        <form id="newsForm" class="news-form">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <input type="file" id="image" accept="image/*" required>
+          </div>
+           
+          <button type="submit" class="submit-button">Submit News</button>
+          <div class="progress-container">
+            <div id="uploadProgress" class="progress-bar"></div>
+          </div>
+        </form>
+        <div class="back-link">
+          <a href="news.html">← Back to News Page</a>
+        </div>
+      </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  <script defer src="news_upload.js"></script>
+</body>
+</html>

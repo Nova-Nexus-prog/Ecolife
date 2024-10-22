@@ -482,7 +482,7 @@ p {
     border-radius: 4px;
   }
   100% {
-    width:350px;
+    width:700px;
     height: 500px;
     background: #FFFFFF;
     border-radius: 4px;
@@ -545,5 +545,33 @@ p {
     100% {
         opacity: 0;
     }
+}
+
+.product-table {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3e8e41; /* Green theme */
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light hover effect */
 }
 

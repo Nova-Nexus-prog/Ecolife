@@ -30,3 +30,10 @@ document.getElementById('ask-btn').addEventListener('click', async () => {
         alert('Please enter a question');
     }
 });
+
+window.onload=()=>{
+    if(!sessionStorage.getItem("username"))
+    {
+      window.location.replace("../sign_in.html")
+    }
+   }

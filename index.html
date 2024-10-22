@@ -120,7 +120,7 @@
     #main_container {
       display: none;
     }
-
+/* ---------------------------------------------------------------------splash */
 
 
     @keyframes scaleUp {
@@ -164,8 +164,8 @@
     <header class="navbar">
       <img src="svg/Group 110.svg" alt="Logo" class="logo" height="50px">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
+      <a href="about.html">About</a>
+      <a href="product/product_main.html">Products</a>
       <div id="userSection"></div>
     </header>
     <!-- Scroll Indicator -->
@@ -237,7 +237,7 @@
         </section>
 
         <section class="latest-news">
-          <h2>Latest News</h2>
+          <h2>Trending News</h2>
           <div class="news-container">
             <div class="news-item">
               <img
@@ -261,61 +261,116 @@
               <p>Scientists have developed a new solar panel that is 20% more efficient than current models, marking a major breakthrough in clean energy technology. The innovation could lead to widespread adoption of solar power across the globe.</p>
             </div>
           </div>
-          <button>View More</button>
+          <a href="news/news.html" style="text-decoration: none;"><button>View latest news</button></a>
         </section>
         
-        <section class="product-section">
-          <h2>MarketPlace</h2>
-          <div class="product-list">
-            <div class="product-item">
-              <img src="https://waterful.in/cdn/shop/files/Bottle.jpg?v=1694019970" alt="Reusable Water Bottle" />
-              <h5>Reusable Water Bottle</h5>
-               <p>$100</p>
-            </div>
-            <div class="product-item">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThyt6ZnMyRwybAhFUHgPRF-FRx9mJWXMG_6g&s" alt="Organic Fertilizer" />
-              <h5>Organic Fertilizer</h5>
-              <p>$100</p>
-            </div>
-            <div class="product-item">
-              <img src="https://agnisolar.com/wp-content/uploads/2019/09/solar-latern-thumb-600x600.jpg" alt="Solar Lantern" />
-              <h5>Solar Lantern</h5>
-              <p>$100</p>
-            </div>
-            <div class="product-item">
-              <img src="https://mygreenbin.in/wp-content/uploads/2023/03/250-ltrs-Community-Composter-01.jpg" alt="Compost Bin" />
-              <h5>Compost Bin</h5>
-              <p>$100</p>
-            </div>
-           
+        <section class="eco-friendly-marketplace">
+          <h2>🌿 Discover Our Eco-Friendly Marketplace 🌿</h2>
+          <blockquote class="quote">
+            "Every time you spend money, you’re casting a vote for the kind of world you want." - Anna Lappe
+          </blockquote>
+          <div class="marketplace-intro">
+            <p>Welcome to our Eco-Friendly Marketplace, where sustainability meets consumer choice. Our platform is dedicated to offering a diverse range of environmentally conscious products that support green living and promote a healthier planet.</p>
+            <p>🌍 From reusable household items to organic food products, every item is carefully selected to minimize environmental impact. By choosing to shop with us, you’re not just purchasing products; you’re making a statement about your values.</p>
           </div>
-          <style>
-            button {
-              background-color: white; /* Green theme */
-              color: #3e8e41;
-              padding: 12px 24px;
-              border: 2px solid #3e8e41;
-              border-radius: 5px;
-              font-size: 16px;
-              cursor: pointer;
-              transition: background-color 0.3s ease;
-            }
-          
-            button:hover {
-              background-color: #98ff9e; /* Darker green on hover */
-            }
-          
-            button:focus {
-              outline: none;
-            }
-          </style>
-          
-          <button>Visit Marketplace</button>
+          <div class="benefits">
+            <h3>Why Shop Eco-Friendly?</h3>
+            <ul>
+              <li>✨ **Support Sustainable Practices:** Each purchase contributes to initiatives that protect natural resources.</li>
+              <li>🌱 **Promote Healthier Living:** Eco-friendly products are better for your health and the environment.</li>
+              <li>🤝 **Join a Community:** Connect with like-minded individuals committed to making a positive change.</li>
+            </ul>
+          </div>
+          <div class="community-call">
+            <p>Join our community of eco-conscious shoppers and explore the best in sustainable living today!</p>
+          </div>
+          <a href="product/product_main.html" style="text-decoration: none;"><button>🌟 Explore the Marketplace 🌟</button></a>
         </section>
+        
+        <style>
+          .eco-friendly-marketplace {
+            padding: 20px;
+            background-color: #eaf7e3; /* Light green background for freshness */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+          }
+        
+          h2 {
+            color: #3e8e41; /* Green theme */
+            text-align: center; /* Center the heading */
+            font-family: 'Arial', sans-serif;
+          }
+        
+          .quote {
+            font-style: italic;
+            color: #555;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 1.2em; /* Increase quote font size */
+          }
+        
+          .marketplace-intro {
+            margin-bottom: 20px;
+            text-align: center; /* Center the intro text */
+          }
+        
+          .benefits {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+          }
+        
+          .benefits h3 {
+            text-align: center; /* Center the benefits heading */
+            color: #3e8e41; /* Green theme */
+          }
+        
+          .benefits ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center; /* Center the list */
+          }
+        
+          .benefits li {
+            margin: 10px 0;
+            font-size: 1.1em; /* Slightly larger font size for the list items */
+          }
+        
+          .community-call {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold; /* Make the call to action bold */
+          }
+        
+          button {
+            background-color: #3e8e41; /* Green theme */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 auto; /* Center the button */
+            display: block;
+          }
+        
+          button:hover {
+            background-color: #2e6f31; /* Darker green on hover */
+          }
+        
+          button:focus {
+            outline: none;
+          }
+        </style>
+        
         
         <section class="donation-promo-section">
           <div class="promo-content">
-            <h2>Support Our Mission</h2>
+            <h2 style="color: #ffffff;text-align: left;">Support Our Mission</h2>
             <p>Your contributions can help us drive more initiatives towards environmental protection, sustainable
               agriculture, and eco-friendly solutions. Every donation counts in building a better future.</p>
             <a href="donation.html" class="donate-now-btn">Donate Now</a>
@@ -323,20 +378,14 @@
         </section>
         <section class="community-promo-section">
           <div class="community-content">
-            <h2>Join the Ecolife Community</h2>
+            <h2 style="text-align: right;">Join the Ecolife Community</h2>
             <p>Connect with like-minded individuals passionate about agriculture, environmental protection, and
               sustainable living. Share your ideas, ask questions, and contribute to a growing community focused on
               making a positive impact.</p>
             <a href="com.html" class="join-community-btn">Ask Community</a>
           </div>
         </section>
-        <section class="resource-library-section">
-          <div class="resource-library-content">
-            <h2>Explore the Ecolife Resource Library</h2>
-            <p>Access a wide range of articles, guides, and tools designed to help you adopt sustainable practices, enhance your knowledge of agriculture, and protect the environment. Stay informed and inspired with resources created by experts in the field.</p>
-            <a href="resource.html" class="visit-library-btn">Visit Resource Library</a>
-          </div>
-        </section>
+         
     </main>
 
     <footer>

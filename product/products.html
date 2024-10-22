@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - EcoShop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="product_main.html" class="logo">
+                <i data-lucide="leaf"></i>
+                <span>EcoShop</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="product_main.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="add_product.html" class="cart-link"><i data-lucide="package-plus"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Our Eco-Friendly Products</h1>
+            <div class="shimmer-grid" id="productShimmer">
+                <div class="shimmer-wrapper">
+                    <div class="shimmer"></div>
+                </div>
+                <div class="shimmer-wrapper">
+                    <div class="shimmer"></div>
+                </div>
+                <div class="shimmer-wrapper">
+                    <div class="shimmer"></div>
+                </div>
+                <div class="shimmer-wrapper">
+                    <div class="shimmer"></div>
+                </div>
+            </div>
+            <div class="product-grid" id="productList"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoShop</h3>
+                    <p>Bringing eco-friendly products to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 EcoShop. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

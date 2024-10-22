@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoQuery - Environmental Q&A Community</title>
+    <link rel="stylesheet" href="community.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <h1><i data-lucide="leaf"></i> EcoQuery</h1>
+        <p>Your Community for Environmental Questions & Answers</p>
+    </header>
+
+    <nav>
+        <button id="askQuestionBtn">Ask a Question</button>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search questions...">
+            <button id="searchBtn"><i data-lucide="search"></i></button>
+        </div>
+        <select id="filterSelect">
+            <option value="all">All Questions</option>
+            <option value="answered">Answered</option>
+            <option value="unanswered">Unanswered</option>
+        </select>
+    </nav>
+
+    <main>
+        <section id="questionList">
+            <!-- Questions will be dynamically added here -->
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ask a Question</h2>
+            <form id="questionForm">
+                <input type="text" id="questionTitle" placeholder="Enter your question title" required>
+                <textarea id="questionContent" placeholder="Describe your question in detail" required></textarea>
+                <input type="text" id="questionTags" placeholder="Enter tags (comma-separated)">
+                <button type="submit">Submit Question</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="community.js"></script>
+</body>
+</html>

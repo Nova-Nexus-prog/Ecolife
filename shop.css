@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+	background-color: #ecebeb;
+}
+
+header {
+    background-color: #3e8e41;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: url("https://assets.cntraveller.in/photos/60ba221ef27d46df614fc78b/16:9/w_1920,h_1080,c_limit/Ecofriendly-Travel-Products.jpg");
+	background-size: contain;
+    color: white;
+	height: 600px;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero .btn {
+    background: white;
+    color: limegreen;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.products {
+    padding: 50px;
+    text-align: center;
+}
+
+.section-title {
+    margin: 40px 0 20px 0;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+}
+
+.product {
+    background: #f4f4f4;
+	border-radius: 10px;
+    padding-top: 10px;
+    margin: 15px;
+    
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
+}
+
+.product img {
+    width: 230px;
+	height: 200px;
+    clip-path: circle(190px);
+}
+
+.add-to-cart {
+    background-color: limegreen;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.buy {
+    background-color: limegreen;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #3e8e41;
+}
+
+footer {
+    background-color: #3e8e41;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.scrollable {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}

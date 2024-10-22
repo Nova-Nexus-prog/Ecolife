@@ -10,20 +10,23 @@ function sign_in_call() {
 }
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAc6GL6tCcqYlwnWmkheYqYciVj_BfqZ_A",
-  authDomain: "ecolife-b8700.firebaseapp.com",
-  projectId: "ecolife-b8700",
-  storageBucket: "ecolife-b8700.appspot.com",
-  messagingSenderId: "685408169279",
-  appId: "1:685408169279:web:f5e83ea19f4f58b393b78a"
+    apiKey: "AIzaSyBSL9CcMpfU-7NPtCz1LjWVuR3Th5NlduI",
+authDomain: "fir-3d35c.firebaseapp.com",
+databaseURL: "https://fir-3d35c-default-rtdb.firebaseio.com",
+projectId: "fir-3d35c",
+storageBucket: "fir-3d35c.appspot.com",
+messagingSenderId: "485524239132",
+appId: "1:485524239132:web:b6c08abaafe83520c940d9"
 };
 firebase.initializeApp(firebaseConfig);
 
 const signInBtn = document.getElementById('sign_in_btn');
 const loginBtn = document.getElementById('login_btn');
 const emailInput = document.querySelector('input[type="email"]');
-const passwordInput = document.querySelector('input[type="password"]');
+const passwordInput_log = document.getElementById("login_password");
+const passwordInput = document.getElementById("signin_password");
 const togglePassword = document.getElementById('togglePassword');
+const togglePassword_log = document.getElementById('togglePassword_log');
 const googleButton = document.getElementById('google-sign-in'); // If you have an ID for the Google button
 const auth = firebase.auth();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -41,8 +44,9 @@ signInBtn.addEventListener('click', () => {
                 // Account created, you can save additional info in the database
                 const user = userCredential.user;
                 sessionStorage.setItem('username', `${firstName} ${lastName}`);
+                window.location.href = 'index.html'; 
                 alert('Account created successfully!');
-                window.location.href = 'index.html'; // Redirect to dashboard
+                 
             })
             .catch((error) => {
                 console.error('Error creating account: ', error.message);
@@ -62,12 +66,14 @@ loginBtn.addEventListener('click', () => {
         .then((userCredential) => {
             const user = userCredential.user;
             sessionStorage.setItem('username', user.displayName || email);
+            window.location.replace = "index.html";
             alert('Logged in successfully!');
-            window.location.replace = 'index.html'; // Redirect to dashboard
+            
         })
         .catch((error) => {
-            console.error('Error logging in: ', error.message);
-            alert('Error: ' + error.message);
+            const res=error.message;
+           
+            alert('INVALID_LOGIN_CREDENTIALS');
         });
 });
 
@@ -91,9 +97,14 @@ if (googleButton) {
 togglePassword.addEventListener('click', () => {
     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInput.setAttribute('type', type);
-    togglePassword.src = type === 'password' ? 'hide.png' : 'show.png'; // Change image source based on visibility
+    togglePassword.src = type === 'password' ? 'hide.png' : 'view.png'; // Change image source based on visibility
 });
 
+togglePassword_log.addEventListener('click', () => {
+    const type = passwordInput_log.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput_log.setAttribute('type', type);
+    togglePassword_log.src = type === 'password' ? 'hide.png' : 'view.png'; // Change image source based on visibility
+});
 // Forgot Password
 document.getElementById('forgot-password').addEventListener('click', () => {
     const email = prompt("Please enter your email address for password reset:");
