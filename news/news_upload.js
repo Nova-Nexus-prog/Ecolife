@@ -47,7 +47,7 @@ newsForm.addEventListener('submit', async (event) => {
   const title = document.getElementById('title').value;
   const description = document.getElementById('description').value;
   const imageFile = document.getElementById('image').files[0];
-  const link = document.getElementById('link').value;
+ 
 
   if (imageFile) {
     // Show the progress container
